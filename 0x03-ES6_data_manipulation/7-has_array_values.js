@@ -1,10 +1,3 @@
-export default function hasValuesFromArray(set, list) {
-  let dict = true;
-  list.map((x) => {
-    if (!set.has(x)) {
-      dict = false;
-    }
-  });
-
-  return dict;
+export default function hasValuesFromArray(set, array) {
+  return array.every((value) => set.has(value));
 }
