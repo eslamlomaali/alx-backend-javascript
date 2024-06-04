@@ -6,13 +6,11 @@ export default function updateStudentGradeByCity(list, city, newGrade) {
         if (studentGrade.studentId === student.id) {
           student.grade = studentGrade.grade;
         }
-
         if (!student.hasOwnProperty('grade')) {
           student.grade = 'N/A';
         }
         return student;
       });
-
       return student;
     });
 }
